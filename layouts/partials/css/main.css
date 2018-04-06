@@ -165,7 +165,7 @@ div.header .name {
   font-size: 28px;
   font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
-  text-transform: uppercase;
+  text-transform: {{ if isset .Site.Params "title_style" }} {{ .Site.Params.title_style }} {{ else }} uppercase {{ end }};
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
